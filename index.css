@@ -12,7 +12,7 @@ a:hover{
 body {
 	margin: 0px;
 	padding: 0px;
-	background: url(./img/hope.png) no-repeat center;
+	background: url(./img/hope.png) no-repeat center rgba(0,0,0,0.5);
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -20,19 +20,36 @@ body {
 	-ms-background-size: cover;
 	background-attachment: fixed;
 	font-family: 'Raleway', sans-serif;
+	overflow: hidden;
+	z-index: 1;
+	background-position: center top;
+	background-size: cover;
 }
-
-.head {
-	width: 1920px;
-	height: 50px;
-	background-color: #000000;
-	margin: 0px;
-	position: fixed;
+body:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	ackground-color: rgba(255,255,255,0.8);
+	z-index: -1;
+	margin: -30px;
+	background-image: url(img/hope.png);
+	background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    -o-filter: blur(20px);
+    filter: blur(20px);
+	
 }
 
 .neck {
 	width: 1920px;
-	height: 935px;
+	height: 980px;/*黑色透明长度*/
 	background-color: rgba(0,0,0,0.5);
 }
 
@@ -41,21 +58,6 @@ body {
 	height: 800px;
 }
 
-.head_table_td {
-	width: 50px;
-	text-align: center;
-	padding-top: 12px;
-}
-
-.head_table {
-	margin-left: 50px;
-}
-
-.head_table_td2 {
-	padding-left: 25px;
-}
-
-
 .container{
     width: 700px;
     display: flex;
@@ -63,6 +65,10 @@ body {
     flex-wrap: wrap;
     align-items: center;
 	margin: auto;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translate(-50%);
 }
 .container .box{
     display: flex;
@@ -72,7 +78,7 @@ body {
     align-content: center;
     width: 100px;
     margin: 20px;
-	margin-top: 650px;
+	margin-top: 500px;
 }
 .container .box .img{
     width: 100px;
@@ -106,6 +112,17 @@ body {
 
 .statement {
 	width: 300px;
-	margin: auto;
-	margin-top: 100px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.head{
+	font-size: 80px;
+	text-align: center;
+	padding-top: 100px;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
