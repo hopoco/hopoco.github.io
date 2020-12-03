@@ -15,7 +15,7 @@ body {
 	width: 1920px;
 	margin: 0px;
 	padding: 0px;
-	height: 2000px;
+	height: 1000px;
 	background-color: #000000;
 }
 
@@ -24,7 +24,7 @@ body {
 	height: 50px;
 	background-color: #000000;
 	margin: 0px;
-	position: fixed;
+	position: fixed;top: 0;
 }
 .head_table_td {
 	color: #FFFFFF;
@@ -48,12 +48,14 @@ body {
 
 
 .content{
-	margin:20px 0;
+	margin:0;
+	margin-top: 50px;
 }
 
 .foot_heading{
 	padding:20px 0;
 	text-align:center;
+	
 }
 .wrap{
 	width:80%;
@@ -98,5 +100,9 @@ body {
 .statement {
 	width: 500px;
 	margin: auto;
-	padding-bottom: 25px;
+	margin-top: 20px;
+}
+
+.text_a:hover{
+	text-decoration: underline;
 }
