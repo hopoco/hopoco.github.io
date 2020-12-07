@@ -12,37 +12,12 @@ a:hover{
 	color:#C7C7C7;
 }
 body {
-	width: 1920px;
 	margin: 0px;
 	padding: 0px;
-	height: 1000px;
 	background-color: #000000;
 }
 
-.head {
-	width: 1920px;
-	height: 50px;
-	background-color: #000000;
-	margin: 0px;
-	position: fixed;top: 0;
-}
-.head_table_td {
-	color: #FFFFFF;
-	width: 50px;
-	text-align: center;
-	padding-top: 12px;
-}
-
-.head_table {
-	margin-left: 50px;
-}
-
-.head_table_td2 {
-	padding-left: 25px;
-}
 .neck {
-	width: 1920px;
-	height: 886px;
 	background-color:#000000;
 }
 
@@ -58,7 +33,7 @@ body {
 	
 }
 .wrap{
-	width:80%;
+	width:1500px;
 	margin:0 auto;
 	transition:all .2s linear;
 	-moz-transition:all .2s linear;
@@ -98,9 +73,10 @@ body {
 }
 
 .statement {
-	width: 500px;
-	margin: auto;
-	margin-top: 20px;
+	position: absolute;
+	bottom: -25%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .text_a:hover{

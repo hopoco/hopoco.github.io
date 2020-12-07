@@ -1,0 +1,13 @@
+
+.gooey-menu-item,
+.open-button {
+    left: 50%;
+    top: 50%;
+}
+#gooey-v .open-button,
+#gooey-v .gooey-menu-item {
+    margin-top: 30em;
+}
+
+
+
