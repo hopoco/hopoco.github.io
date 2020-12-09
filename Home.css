@@ -2,6 +2,7 @@
 	position: fixed;
 	bottom: 5%;
 	right: -10%;
+	z-index: 3;
 }
 
 
@@ -14,11 +15,18 @@
 	-moz-osx-font-smoothing: grayscale;
 	transform: translate(0, 0);
 	color: #000000;
+	transition: color 0.25s;
+	-webkit-transform: color 0.25;
 }
 
 .gooey-menu-item:hover .fa{
 	color: #ffffff;
 }
+
+.fa-play-circle{
+	
+}
+
 .gooey-menu-item,
 .open-button {
 	border-radius: 100%;

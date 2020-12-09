@@ -1,5 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
+.head{
+	font-size: 35px;
+	text-align: center;
+	padding-top: 100px;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+}
 *{
 	color: #FFFFFF;
 }
@@ -9,6 +19,24 @@ a{
 a:hover{
 	color:#C7C7C7;
 }
+h1{
+	transition: color 0.25s;
+	    -webkit-transition: color 0.25s;
+}
+h4{
+	transition: color 0.25s;
+	    -webkit-transition: color 0.25s;
+}
+h1:hover{
+	color: #000000;
+}
+h4:hover{
+	color: #000000;
+}
+p:hover{
+	color: #000000;
+}
+
 body {
 	margin: 0px;
 	padding: 0px;
@@ -47,15 +75,28 @@ body:after{
 	
 }
 
+.musicpage{
+	display: none;
+	width: 1920px;
+	height: 980px;
+	background: #000000;
+	z-index: 3;
+	position: relative;
+}
+
 .neck {
 	width: 1920px;
 	height: 980px;/*黑色透明长度*/
-	background-color: rgba(0,0,0,0.5);
+	
+	
 }
+
+
 
 .foot {
 	width: 1920px;
 	height: 800px;
+
 }
 
 .container{
@@ -117,12 +158,4 @@ body:after{
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
-.head{
-	font-size: 80px;
-	text-align: center;
-	padding-top: 100px;
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-}
+

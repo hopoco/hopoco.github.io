@@ -8,6 +8,7 @@ a:hover{
 	color:#C7C7C7;
 }
 body {
+	
 	margin: 0px;
 	padding: 0px;
 	background: #000000;
@@ -15,7 +16,11 @@ body {
 	
 }
 .bodymain{
-	height: 100%;
+	height: 1300px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0%;
 }
 .page{
 	position: absolute;
@@ -38,8 +43,16 @@ body {
 	top: 35%;
 	left: 50%;
 	transform: translate(-50%);
-	
 }
+
+.txttxttxt2{
+	width: 50%;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
 .webadd{
 	color: #005EBD;
 }

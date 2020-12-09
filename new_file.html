@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <title>无标题文档</title>
+        <style>
+            #aa {
+                width: 500px;
+                height: 30px;
+                line-height: 30px;
+                background: red;
+            }
+             
+            #bb {
+                width: 500px;
+                height: 300px;
+                background: yellow;
+            }
+             
+            #saa {
+                float: right;
+                color: #FFF;
+                font-weight: bold;
+                cursor: pointer;
+            }
+             
+            .a1 {
+                background: black;
+                width: 50px;
+                height: 30px;
+            }
+             
+            .a2 {
+                background: blue;
+                width: 50px;
+                height: 30px;
+            }
+        </style>
+    </head>
+ 
+    <body>
+        <div id="aa">
+            <span id="saa" class="a1"></span>
+        </div>
+        <div id="bb"></div>
+        <div style="width: 500px; height: 300px; background: green; display: none;"></div>
+        <script type="text/javascript">
+            function $(id){return document.getElementById(id)}
+             
+            var b = 300;
+            function aaa() {
+                var bb = document.getElementById('bb');
+                if(b < 300) {
+                    b += 100;
+                    if (b > 300) {return;}
+                    bb.style.height = b+"px";
+                }
+                setTimeout("aaa()", 5000);
+            }
+            function bbb(){
+                var bb = document.getElementById('bb');
+                if(b >= 0){
+                    b -= 5;
+                    if (b < 0) {return;}
+                    bb.style.height = b+"px";
+                }
+                setTimeout("bbb()", 50);
+            }
+             
+            $('saa').onclick = function() {
+                if($('saa').className == "a1"){
+                    //$("bb").style.display = "none";
+                    $('saa').className = "a2";
+                    //setTimeout("bbb()",1000);
+                    bbb();
+                } else {        
+                    //$("bb").style.display = "block";
+                    $('saa').className = "a1";
+                    //setTimeout("aaa()",1000);
+                    aaa();
+                }            
+             }
+        </script>
+ 
+    </body>
+</html>

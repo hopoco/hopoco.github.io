@@ -74,7 +74,7 @@ body {
 
 .statement {
 	position: absolute;
-	bottom: -25%;
+	top: 102%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 }

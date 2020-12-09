@@ -15,39 +15,19 @@
  </head>
 
  <body>
-  <script>
-   $(function($) {
-	$("#gooey-v").gooeymenu({
-	bgColor: "#fff",
-	contentColor: "white",
-	style: "vertical",
-	horizontal: {
-	menuItemPosition: "glue"
-	},
-	vertical: {
-    menuItemPosition: "spaced",
-    direction: "up"
-	},
-	circle: {
-    radius: 90
-	},
-	margin: "small",
-	size: 70,
-	bounce: true,
-	bounceLength: "small",
-	transitionStep: 100,
-	hover: "#000"
-  });
-
- });
-</script>
-
-
+	
+<div class="musicpage" id="musicpage">
+	
+</div>
 
   <div class="neck">
    <!--按钮列表，根目录-->
    <div class="head">
-    热忱之心不可泯灭
+	   <br><br><br>
+	<h1>热忱之心不可泯灭</h1>
+	<h4>体恤弱者，互相帮助</h4>
+	<h4>与全世界的人都能成为朋友</h4>
+	<p style="font-size: 20px;" align="right">————@艾斯</p>
    </div>
 
    <div class="foot">
@@ -73,8 +53,8 @@
       <p>软件资源</p>
      </div>
      <!--3-->
-     <div class="box">
-      <a href="">
+     <div class="box" id="neck">
+      <a href="cloud/cloud.html">
        <div class="img">
         <img src="img/cloud.ico" />
        </div>
@@ -104,14 +84,45 @@
        <span class="burger burger-3"></span>
       </label>
    
-      <a href="#" class="gooey-menu-item"> <i class="fa fa-envelope-o"></i> </a>
-      <a href="#" class="gooey-menu-item"> <i class="fa fa-rmb"></i> </a>
-      <a href="TowLevel/resource.html" class="gooey-menu-item"> <i class="fa fa-folder-open"></i></a>
-      <a href="index.html" class="gooey-menu-item"> <i class="fa fa-home"></i></a>
+      <a href="#" class="gooey-menu-item musicaudio" id="pageFN" style="cursor:pointer;"> <i class="fa fa-forward "></i></a>
+      <a href="TowLevel/resource.html" class="gooey-menu-item"> <i class="fa fa-folder"></i></a>
+      <a href="index.html" class="gooey-menu-item"> <i class="fa fa-refresh"></i></a>
      </nav>
     </div>
    </div>
 
 
+ <script>
+    $(function($) {
+ 	$("#gooey-v").gooeymenu({
+ 	bgColor: "#fff",
+ 	contentColor: "white",
+ 	style: "vertical",
+ 	horizontal: {
+ 	menuItemPosition: "glue"
+ 	},
+ 	vertical: {
+     menuItemPosition: "spaced",
+     direction: "up"
+ 	},
+ 	circle: {
+     radius: 90
+ 	},
+ 	margin: "small",
+ 	size: 70,
+ 	bounce: true,
+ 	bounceLength: "small",
+ 	transitionStep: 100,
+ 	hover: "#000",
+   });
+ 
+  });
+ </script>
+<script>
+	$(document).ready(function(){
+				$(".musicaudio").click(function(){
+					$(".musicpage").fadeToggle(1000);
+				});});			
+</script>
  </body>
 </html>

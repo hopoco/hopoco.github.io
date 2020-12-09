@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>工具</title>
+		<link rel="stylesheet" href="../Home.css">
+		<script type="text/javascript" src="../jquery-2.1.3.min.js"></script>
+		<script src="../gooey.min.js" ></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		
+		<!--轮播-->
+		<link rel="stylesheet" type="text/css" href="../TowLevel/DownloadAdd/style/ADD.css" />
+
+	</head>
+	
+	<body>
+		
+		<script>
+		   $(function($) {
+			$("#gooey-v").gooeymenu({
+			bgColor: "#fff",
+			contentColor: "white",
+			style: "vertical",
+			horizontal: {
+			menuItemPosition: "glue"
+			},
+			vertical: {
+		    menuItemPosition: "spaced",
+		    direction: "up"
+			},
+			circle: {
+		    radius: 90
+			},
+			margin: "small",
+			size: 70,
+			bounce: true,
+			bounceLength: "small",
+			transitionStep: 100,
+			hover: "#000"
+		  });
+		  });
+		</script>
+		
+		<script type="text/javascript">
+			'use strict';
+			var dots = 4;
+			var sliderElem = document.querySelector('.slider');
+			var dotElems = sliderElem.querySelectorAll('.slider__dot');
+			var indicatorElem = sliderElem.querySelector('.slider__indicator');
+		
+			Array.prototype.forEach.call(dotElems, function (dotElem) {
+		
+				dotElem.addEventListener('click', function (e) {
+		
+					var currentPos = parseInt(sliderElem.getAttribute('data-pos'));
+					var newPos = parseInt(dotElem.getAttribute('data-pos'));
+		
+					var newDirection = newPos > currentPos ? 'right' : 'left';
+					var currentDirection = newPos < currentPos ? 'right' : 'left';
+		
+					indicatorElem.classList.remove('slider__indicator--' + currentDirection);
+					indicatorElem.classList.add('slider__indicator--' + newDirection);
+					sliderElem.setAttribute('data-pos', newPos);
+				});
+			});
+		</script>
+		
+		
+		
+		<div class="row">
+		 <div class="homehover">
+		  <nav id="gooey-v">
+		   <input type="checkbox" class="menu-open" name="menu-open4" id="menu-open4" />
+		   <label class="open-button" for="menu-open4">
+		    <span class="burger burger-1"></span>
+		    <span class="burger burger-2"></span>
+		    <span class="burger burger-3"></span>
+		   </label>
+		   <a href="#" class="gooey-menu-item"> <i class="fa fa-envelope-o"></i> </a>
+		   <a href="#" class="gooey-menu-item"> <i class="fa fa-rmb"></i> </a>
+		   <a href="../resource.html" class="gooey-menu-item"> <i class="fa fa-folder-open"></i></a>
+		   <a href="../index.html" class="gooey-menu-item"> <i class="fa fa-home"></i></a>
+		  </nav>
+		 </div>
+		</div>
+		
+		
+		<div class="bodymain">
+			<h1 align="center">常见工具一览</h1><p align="center">（点击跳转对应官网）</p>
+			<div class="page">
+				<div class="txttxttxt2">
+					<p><a href="https://cloud.189.cn">天翼网盘<br/>独立网盘，与百度云不相通，基础60G存储空间，速度良好</a></p><br/>
+					<p><a href="https://www.lanzou.com">蓝奏云<br/>独立网盘，与百度云不相通，不限存储空间，不限速，速度良好</a></p><br/>
+					<p><a href="https://kinhdown.kinh.cc">kinhdown<br/>破解网盘，可登录百度网盘账号下载已保存内容，也可复制度盘链接直接下载，退出重进后会清空下载中的文件，重下虽然会读取已下载进度，但压缩包文件会被损坏，速度不稳定，快的时候很快</a></p><br/>
+					<p><a href="http://client.jijidown.com/">jijidown<br/>B站视频下载器，可登录B站账号下载1080p+，但是只能下载av和bv号视频，无法下载官方电影和纪录片，且界面和音效容易导致社会性死亡</a></p><br/>
+					<p><a href="https://www.bitcomet.com/en">BT彗星<br/>bt种子下载器，个人感觉弊端很多，不过许多人都在推荐，就也放在这里</a></p><br/>
+					<p><a href="http://www.pcgeshi.com/index.html">格式工厂<br/>非常好用的格式转换器，支持非常多的文件格式，不过爱奇艺、腾讯等独特后缀的视频需要下载他们的官方播放器后才能转换格式</a></p><br/>
+					<p><a href="http://www.jilinlx.com">猎豹加速器<br/>可以爬墙，每日签到可使用两小时，不建议充值</a></p>
+					<p><br/></p><br/>
+				</div><!--文字-->
+			</div>
+		</div>
+				
+				
+		
+	</body>
+</html>
