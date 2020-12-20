@@ -17,6 +17,7 @@
 	color: #000000;
 	transition: color 0.25s;
 	-webkit-transform: color 0.25;
+	cursor: pointer;
 }
 
 .gooey-menu-item:hover .fa{
@@ -52,7 +53,7 @@
 }
 
 .menu-open {
-	display: none
+	display: none;
 }
 
 .burger {
@@ -163,4 +164,66 @@
 	-o-transform: scale(.9, .9) translate3d(0, 0, 0);
 	-webkit-transform: scale(.9, .9) translate3d(0, 0, 0);
 	-moz-transform: scale(.9, .9) translate3d(0, 0, 0)
+}
+
+.musicpage{
+	border-radius: 50000px;
+	display: none;
+	width: 70px;
+	height: 70px;
+	z-index: 2;
+	background: linear-gradient(90deg,#a1c4fd, #c2e9fb,#d4fc79, #96e6a1,#ff0844,#ffb199,#5f72bd,#9b23ea,#96deda,#50c9c3,#5271C4,#B19FFF,#ECA1FE,#a1c4fd);
+	background-size: 5000%;
+	animation: animate 50s linear infinite;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+}
+@keyframes animate{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 100%;
+	}
+}
+.fa-5x{
+	color: #FFFFFF;
+	margin-left: 200px;
+	margin-right:100px;
+
+}
+
+.pagemain{
+	width: 1200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	animation: playmusic 3s ;
+}
+@keyframes playmusic{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.musicpage .info {
+	z-index: 5;
+    display: inline-block;
+    width: 500px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    font-family:黑体;
+    font-size: 30px;
+	position: absolute;
+	top: 45%;
+	left: 50.25%;
+	transform: translate(-50%,-50%);
 }
