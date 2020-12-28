@@ -12,12 +12,19 @@
   <script src="gooey.min.js"></script>
   
   <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
-  
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?2cb7dc26b4bb9923347b7c1c097327ab";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
   </head>
 
  <body id="body">
-	
-
 
   <div class="neck">
    <!--按钮列表，根目录-->
@@ -188,6 +195,7 @@
 	    musicDom : null, //播放器对象
 	    songs : [],      //歌曲目录，用数组来存储
 	    index : 0,       //当前播放的歌曲索引
+		
 	
 	    //初始化音乐盒
 	    init : function(themeIndex){
@@ -267,7 +275,11 @@
 	musicBox.add('Music/Queen - Killer Queen.mp3');
 	musicBox.add('Music/银河奥特曼.mp3');
 	musicBox.add('Music/万能青年旅店 - 杀死那个石家庄人.mp3');
-	musicBox.add('Music/新裤子 - 你要跳舞吗-《半个喜剧》电影插曲.mp3');
+	musicBox.add('Music/Beyond - 海阔天空.mp3');
+	musicBox.add('Music/Eagles - Hotel California (2013 Remaster).mp3');
+	musicBox.add('Music/G.E.M.邓紫棋 - 摩天动物园.mp3');
+	musicBox.add('Music/Shelter.mp3');
+	
 	//歌曲列表
 	
 	/* 获取开始按钮 *///后面的都是按键绑定
@@ -281,8 +293,8 @@
 		play.onclick = function(){
 		    this.style.display = 'none';
 		    pause.style.display = 'inline';
+
 			//播放
-			musicBox.play();
 			/* 获取歌曲的信息栏 */
 			infoDom.innerHTML = ''; //先清空上一次的信息
 			infoDom.innerHTML = musicBox.getCurrentSong();//显示当前的歌曲信息
